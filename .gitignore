@@ -59,3 +59,13 @@ typings/
 
 # next.js build output
 .next
+
+# Local configs
+local-*
+*-local.*
+
+package-lock.json
+
+#don't version generated files
+/dist
+procesa.code-workspace

@@ -1,0 +1,44 @@
+{
+  "name": "apilado",
+  "description": "Apilado de backend y frontend en puro TS",
+  "version": "0.0.1",
+  "author": "Codenautas <codenautas@googlegroups.com>",
+  "repository": "codenautas/apilado",
+  "license": "MIT",
+  "main": "out/server/app.js",
+  "types": "out/server/app.d.ts",
+  "files": [
+    "client",
+    "install",
+    "server",
+    "unlogged"
+  ],
+  "dependencies": {
+    "backend-plus": "~0.26.14",
+    "datos-ext": "~0.3.3",
+    "pg-triggers": "~0.2.2",
+    "operativos": "~0.3.3"
+  },
+  "devDependencies": {
+    "copyfiles": "~2.1.0"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "scripts": {
+    "test": "(npm run build || echo \"continue with errors\") && mocha --reporter spec --bail --check-leaks out/tests/tests/*.js",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks out/tests/tests/",
+    "start": "node out/server/server.js",
+    "prepare": "npm run build",
+    "cp": "copyfiles -f src/client/img/* out/client/img",
+    "build": "npm run cp && (tsc -p src/client/tsconfig.json || echo \"continue w/error\") && (tsc -p src/server/tsconfig.json  || echo \"continue w/error\")"
+  },
+  "qa-control": {
+    "package-version": "0.3.0",
+    "coverage": 90,
+    "run-in": "server",
+    "stability": "extending",
+    "type": "lib",
+    "ecmaVersion": 6
+  }
+}
