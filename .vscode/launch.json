@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch",
             "preLaunchTask": "build-all",
-            "program": "${workspaceFolder}/out/server/server.js",
+            "program": "${workspaceFolder}/dist/server/server.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
@@ -19,7 +19,7 @@
             "request": "launch",
             "name": "dumpDb",
             "preLaunchTask": "build-all",
-            "program": "${workspaceFolder}/out/server/server.js",
+            "program": "${workspaceFolder}/dist/server/server.js",
             "args": [
                 "--dump-db"
             ],
