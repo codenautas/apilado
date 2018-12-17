@@ -5,8 +5,8 @@
   "author": "Codenautas <codenautas@googlegroups.com>",
   "repository": "codenautas/apilado",
   "license": "MIT",
-  "main": "out/server/app.js",
-  "types": "out/server/app.d.ts",
+  "main": "dist/server/app-apilado.js",
+  "types": "dist/server/app-apilado.d.ts",
   "files": [
     "client",
     "install",
@@ -14,10 +14,8 @@
     "unlogged"
   ],
   "dependencies": {
-    "backend-plus": "~0.26.14",
-    "datos-ext": "~0.3.3",
-    "pg-triggers": "~0.2.2",
-    "operativos": "~0.3.3"
+    "backend-plus": "~0.27.5",
+    "pg-triggers": "~0.2.2"
   },
   "devDependencies": {
     "copyfiles": "~2.1.0"
