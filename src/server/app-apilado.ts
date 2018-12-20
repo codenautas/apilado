@@ -19,6 +19,9 @@ export class AppApilado{
         },
         primaryKey:['usuario']
     }
+    constructor(...args:any[]){ 
+        console.log('cons',args);
+    }
     async start():Promise<void>{
         console.log('started', this)
     }

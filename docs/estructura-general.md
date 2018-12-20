@@ -5,9 +5,12 @@ El framwork se llama apilado porque está destinado a apliar definiciones
 Dada cualquier aplicación se le puede apilar distintas capas. 
 Por ejemplo, podrían ser capas genéricas (que se le pueden apilar a cualquier aplicación):
 
-  * Una agenda (con las tablas calenario y citas, y un método que sepa dibujar eso en pantalla)
-  * Una bitácora (que deja registrado todas las acciones de los usuarios) con su botón actividad (que muestra al supervisor qué hizo cada usuario)
-  * Un configurador visual (para elegir tipos de letra y sus tamaños, colores en pantalla, etc)
+  * Una agenda (con las tablas calenario y citas, y un método que sepa 
+    dibujar eso en pantalla)
+  * Una bitácora (que deja registrado todas las acciones de los usuarios) con 
+    su botón actividad (que muestra al supervisor qué hizo cada usuario)
+  * Un configurador visual (para elegir tipos de letra y sus tamaños, colores 
+    en pantalla, etc)
 
 Apilando una capa la aplicación final tendría más funcionalidad. Otras capas
 serían específicas a un dominio particular o a una aplicación ya existente. 
@@ -41,18 +44,24 @@ refrescar el contenido de las pantalla y enviar mensajes al usuario.
 Una parte fundamental del front-end es poder dibujar (de manera genérica)
 las tablas (tipo Excel) para poder editar los datos de la aplicación. 
 
-## conocimiento
+## modelo
 
-Es el conjunto de clases que describe el conocimiento sobre el negocio 
+Es el conjunto de clases que describe el modelo del negocio 
 (buisness rules), independientemente de los detalles de implementación
 del back-end y del front-end. 
-Forman parte del conocimiento:
+Forman parte del modelo:
 
-  1. El modelo de datos: los nombres de tablas o entidades con sus campos, tipos y relaciones (ej: tabla de calendario, tabla de citas).
+  1. El modelo de datos: los nombres de tablas o entidades con sus campos, 
+    tipos y relaciones (ej: tabla de calendario, tabla de citas).
   2. Los procesos o servicios (ej: cancelar todas las citas de una semana)
-  3. Los controless (ej: no se pueden agendar citas para días bloqueados en el calendario)
+  3. Los controless (ej: no se pueden agendar citas para días bloqueados 
+    en el calendario)
   4. Los menúes
   5. Los permisos
-  6. Las pantallas que deben usarse para las distintas interacciones (ej: para mostrar el calendario en vez de una tabla tipo *"Excel"* se usará una pantalla específica definida en la capa de *front-end* del calendario)
+  6. Las pantallas que deben usarse para las distintas interacciones 
+    (ej: para mostrar el calendario en vez de una tabla tipo *"Excel"* 
+    se usará una pantalla específica definida en la capa de *front-end* 
+    del calendario)
 
-El conocimiento (o una parte de él) está compartido entre el *front-end* y el *back-end*
+El conocimiento (o una parte de él) está compartido entre el *front-end* 
+y el *back-end*

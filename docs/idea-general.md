@@ -15,4 +15,7 @@ El repositorio tiene pruebas de concepto (código *TypeScript*)
 y documentos con ideas. 
 Estas ideas están ilustradas con su propio fragmento de código simplificado.
 
-  * [Estructura General](estructura-general.md): división de los conceptos servidor, cliente y aplicación. 
+  * [Estructura General](estructura-general.md): división de los conceptos 
+    servidor, cliente y aplicación (front-end, back-end y modelo de negocio). 
+  * [Mecanismo de Apilado](mecanismo-apilado.md): la forma de poder apilar
+    las distintas capas del sistema
