@@ -1,7 +1,7 @@
 import * as AppApliado from "./app-apilado";
 
-// function emergeAppEjemplo(Base:typeof AppApliado){
-function emergeAppEjemplo<T extends typeof AppApliado>(Base:T){
+function emergeAppEjemplo(Base:typeof AppApliado){
+// function emergeAppEjemplo<T extends typeof AppApliado>(Base:T){
     class AppEjemplo extends Base.AppApilado{
         constructor(...args:any[]){ 
             console.log('eje1',args)

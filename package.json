@@ -1,7 +1,7 @@
 {
   "name": "apilado",
   "description": "Apilado de backend y frontend en puro TS",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Codenautas <codenautas@googlegroups.com>",
   "repository": "codenautas/apilado",
   "license": "MIT",
@@ -13,11 +13,9 @@
     "server",
     "unlogged"
   ],
-  "dependencies": {
-    "backend-plus": "~0.27.5",
-    "pg-triggers": "~0.2.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@types/node": "10.12.18",
     "copyfiles": "~2.1.0"
   },
   "engines": {
