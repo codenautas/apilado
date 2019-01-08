@@ -1,5 +1,5 @@
-import {AppApilado} from "./app-apilado";
+import {Backend} from "./apilado";
 
-var app = new AppApilado();
+var app = new Backend();
 app.start();
 

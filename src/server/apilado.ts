@@ -12,7 +12,7 @@ export class Table{
 
 }
 
-export class AppApilado{
+export class Backend{
     public usuariosTD:TableDefinition={
         field:{
             usuario:{typeName:'text'}

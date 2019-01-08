@@ -1,8 +1,8 @@
-import * as AppApliado from "./app-apilado";
+import * as AppApliado from "./apilado";
 
 // function emergeAppEjemplo(Base:typeof AppApliado){
-function emergeAppEjemplo<T extends typeof AppApliado>(Base:T){
-    class AppApilado extends Base.AppApilado{
+function emergeEjemplo1<T extends typeof AppApliado>(Base:T){
+    class Backend extends Base.Backend{
         constructor(...args:any[]){ 
             console.log('eje1',args)
             super(...args);
@@ -10,12 +10,12 @@ function emergeAppEjemplo<T extends typeof AppApliado>(Base:T){
         }
         get esUno(){ return true };
     }
-    return {...Base, AppApilado:AppApilado};
+    return {...Base, Backend};
 }
 
 // function emergeAppEjemplo2(Base:typeof AppApliado){
-function emergeAppEjemplo2<T extends typeof AppApliado>(Base:T){
-    class AppApilado extends Base.AppApilado{
+function emergeEjemplo2<T extends typeof AppApliado>(Base:T){
+    class Backend extends Base.Backend{
         constructor(...args:any[]){ 
             console.log('EJE1',args)
             super(...args);
@@ -23,14 +23,14 @@ function emergeAppEjemplo2<T extends typeof AppApliado>(Base:T){
         }
         get esDos(){ return true };
     }
-    return {...Base, AppApilado:AppApilado};
+    return {...Base, Backend};
 }
 
-var AppEjemplo1=emergeAppEjemplo(AppApliado)
-var AppEjemplo2=emergeAppEjemplo2(AppApliado)
+var AppEjemplo1=emergeEjemplo1(AppApliado)
+var AppEjemplo2=emergeEjemplo2(AppApliado)
 
-var app1 = new AppEjemplo1.AppApilado('1');
-var app2 = new AppEjemplo2.AppApilado('2');
+var app1 = new AppEjemplo1.Backend('1');
+var app2 = new AppEjemplo2.Backend('2');
 
 app1.start();
 app1.describe();
@@ -39,8 +39,8 @@ app2.start();
 app2.describe();
 console.log('app2',app2.esUno,app2.esDos) // ok: esUno err!
 
-var AppEjemplo12 = emergeAppEjemplo2(emergeAppEjemplo(AppApliado))
-var app12 = new AppEjemplo12.AppApilado('12');
+var AppEjemplo12 = emergeEjemplo2(emergeEjemplo1(AppApliado))
+var app12 = new AppEjemplo12.Backend('12');
 
 app12.start();
 console.log('app12',app12.esUno,app12.esDos,app12.esTres); // Ok: esTres err!
