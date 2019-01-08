@@ -1,12 +1,12 @@
 {
   "name": "apilado",
   "description": "Apilado de backend y frontend en puro TS",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "author": "Codenautas <codenautas@googlegroups.com>",
   "repository": "codenautas/apilado",
   "license": "MIT",
-  "main": "dist/server/app-apilado.js",
-  "types": "dist/server/app-apilado.d.ts",
+  "main": "dist/server/apilado.js",
+  "types": "dist/server/apilado.d.ts",
   "files": [
     "dist",
     "install"
