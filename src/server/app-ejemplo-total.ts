@@ -33,8 +33,10 @@ var app1 = new AppEjemplo1.AppApilado('1');
 var app2 = new AppEjemplo2.AppApilado('2');
 
 app1.start();
+app1.describe();
 console.log('app1',app1.esUno,app1.esDos) // ok: esDos err!
 app2.start();
+app2.describe();
 console.log('app2',app2.esUno,app2.esDos) // ok: esUno err!
 
 var AppEjemplo12 = emergeAppEjemplo2(emergeAppEjemplo(AppApliado))
@@ -42,4 +44,5 @@ var app12 = new AppEjemplo12.AppApilado('12');
 
 app12.start();
 console.log('app12',app12.esUno,app12.esDos,app12.esTres); // Ok: esTres err!
+app12.describe();
 

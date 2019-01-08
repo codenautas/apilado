@@ -22,6 +22,10 @@ export class AppApilado{
     constructor(...args:any[]){ 
         console.log('cons',args);
     }
+    describe(){
+        // @ts-ignore
+        console.log(this.esUno, this.esDos, this.esTres)
+    }
     async start():Promise<void>{
         console.log('started', this)
     }
