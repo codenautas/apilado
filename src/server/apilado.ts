@@ -13,6 +13,7 @@ export class Table{
 }
 
 export class Backend{
+    public zero:string='unnamed'
     public usuariosTD:TableDefinition={
         field:{
             usuario:{typeName:'text'}
@@ -20,11 +21,12 @@ export class Backend{
         primaryKey:['usuario']
     }
     constructor(...args:any[]){ 
-        console.log('cons',args);
+        console.log('constructing...',(this.constructor||{name:'unknown class name'}).name,args);
+        this.zero=args[0];
     }
     describe(){
         // @ts-ignore
-        console.log(this.esUno, this.esDos, this.esTres)
+        console.log('describing',(this.constructor||{name:'unknown class name'}).name,this.esUno, this.esDos, this.esTres)
     }
     async start():Promise<void>{
         console.log('started', this)
